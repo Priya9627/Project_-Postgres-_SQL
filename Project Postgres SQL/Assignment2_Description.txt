@@ -1,0 +1,66 @@
+Assignment Description:
+
+1.Objective:
+
+Count the number of email messages per organization (domain name of the email address) in a given mailbox data file (mbox.txt).
+Use a database with a specified schema (Counts table with columns org and count) to maintain the counts.
+
+2.Schema:
+
+Create a table named Counts with columns:
+org (TEXT): Represents the organization (domain name).
+count (INTEGER): Represents the count of email messages for that organization.
+
+3. Expected Output:
+
+After running the program on mbox.txt, the resulting database should contain the counts.
+The expected output includes displaying the counts in descending order.
+
+4. Data File:
+mbox.txt contains sample email data with various email addresses and organizations.
+
+5.Submission:
+Upload the resulting database file for grading.
+
+Provided Python Script:--
+
+1. File Input:
+Asks the user to enter the file name (default is mbox.txt).
+Opens and reads the specified file.
+
+2.Database Connection:
+Defines functions to create or connect to an SQLite database (email_counts.sqlite) and create the Counts table if it doesn't exist.
+
+3.Update Counts:
+Defines a function to update or insert counts into the database based on the organization.
+
+4.Processing Email Data:
+Iterates through each line in the file.
+Identifies lines starting with 'From ' to extract email addresses and corresponding domain names.
+Updates the counts in the database for each organization.
+
+5.Retrieve and Print Counts:
+Retrieves the counts from the database and prints them in descending order.
+
+6.Closing Database Connection:
+Closes the SQLite database connection.
+
+Instructions for Running:-
+Requirements:
+Install SQLite module by (pip install sqlite).
+Run the script in a directory with write permissions to create the SQLite database file.
+Execution:
+
+Run the script and provide the file name when prompted.
+The script processes the data, updates the database, and prints the counts.
+Output:
+
+The counts are displayed in descending order of email messages per organization.
+
+
+
+
+
+
+
+
